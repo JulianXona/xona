@@ -161,7 +161,7 @@ function ClientesMarquee({ size = 'L' }) {
     { nombre: "Zurich Santander",logo: "images/clientes/Zurich-Santander.png" }
   ];
 
-  const h = size === 'L' ? '56px' : '40px';
+  const h = size === 'L' ? '70px' : '40px';
 
   const Strip = () => (
     <div className="marquee-track" style={{ animationDuration: size === 'L' ? '50s' : '35s', display: 'flex', alignItems: 'center' }}>
