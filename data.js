@@ -107,7 +107,8 @@ window.XONA = {
       corta:"Alzamos la voz de mujeres emblemáticas de la historia argentina como core de un lanzamiento.",
       larga:"Una campaña que puso en valor el legado de mujeres que transformaron la historia argentina, conectando emocionalmente con las audiencias en una fecha clave.",
       tags:["Branded Content","PR"], color:"#D44C7A",
-      hero:"images/casos/avon/Hero.jpg",
+      hero:"images/casos/avon/hero.jpg",
+      cover:"images/casos/avon/cover.jpg",
       bg:"images/casos/avon/bg.jpg",
       video:"https://www.youtube.com/embed/-zETfrlwUrg?rel=0&modestbranding=1&showinfo=0",
       gallery:[

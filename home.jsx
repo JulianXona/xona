@@ -79,7 +79,7 @@ function HomeCases() {
             >
               {/* Background image — full width of the row */}
               <div className="case-row-bg" aria-hidden="true">
-                <img src={c.hero} alt="" loading="lazy" />
+                <img src={c.cover || c.hero} alt="" loading="lazy" />
                 <div className="grain"></div>
                 <div className="tint" style={{ background: `linear-gradient(90deg, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.5) 60%, ${hexToRgba(c.color, 0.55)} 100%)` }}></div>
               </div>
