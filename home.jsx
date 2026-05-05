@@ -377,8 +377,6 @@ function HomeA() {
         </div>
       </section>
 
-      <HomeStats />
-
       <HomeCases />
 
       <section className="section-pad">
