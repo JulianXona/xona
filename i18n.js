@@ -1,27 +1,14 @@
 // XONA — i18n: ES / EN / IT
 window.XONA_I18N = {
   ES: {
-    nav: { home: "Inicio", xomos: "Xomos", work: "Qué hacemos", contact: "Contacto" },
+    nav: { home: "Inicio", xomos: "Xomos", works: "Works", work: "Qué hacemos", contact: "Contacto" },
     common: {
-      site: "Sitio",
-      offices: "Oficinas",
-      whatWeDo: "Qué hacemos",
-      whoWeAre: "Quiénes somos",
-      services: "Servicios",
-      cases: "Casos",
-      clients: "Clientes",
-      contact: "Contactanos",
-      viewAll: "Ver todos",
-      explore: "Explorar",
-      seeReel: "Ver reel",
-      motionReel: "Reel · Motion · 2025",
-      start: "Empecemos",
-      scroll: "Scroll para descubrir"
+      site: "Sitio", offices: "Oficinas", whatWeDo: "Qué hacemos", whoWeAre: "Quiénes somos",
+      services: "Servicios", cases: "Casos", clients: "Clientes", contact: "Contactanos",
+      viewAll: "Ver todos", explore: "Explorar", seeReel: "Ver reel",
+      motionReel: "Reel · Motion · 2025", start: "Empecemos", scroll: "Scroll para descubrir"
     },
-    footer: {
-      hablemos: "Hablemos —",
-      copyright: "Marketing de Experiencias"
-    },
+    footer: { hablemos: "Hablemos —", copyright: "Marketing de Experiencias" },
     home: {
       eyebrow: "Marketing de Experiencias · Desde 2005",
       titulo: ["Convertimos ideas", "en experiencias", "extraordinarias."],
@@ -46,6 +33,7 @@ window.XONA_I18N = {
       diferencialKicker: "Lo que nos diferencia",
       diferencialTitulo: "Pensamos en grande. Ejecutamos en detalle.",
       diferencialCuerpo: "No vendemos servicios sueltos. Diseñamos sistemas de experiencia: cada acción conversa con la siguiente, cada superficie refuerza la marca, cada momento construye recuerdo.",
+      kickerClientes: "Confían en nosotros",
       ctaKicker: "Empecemos",
       ctaTitulo: ["¿Tenés una idea?", "Hagámosla extraordinaria."]
     },
@@ -69,69 +57,50 @@ window.XONA_I18N = {
         cuerpo: "Empezamos en Buenos Aires en 2005 con una idea simple: las marcas necesitan dejar de hablar y empezar a construir momentos. Hoy ese punto de partida nos llevó a Bariloche, Santiago y Roma, con un equipo de más de 40 personas y proyectos en 12 países."
       }
     },
-    queHacemos: {
-      eyebrow: "Servicios · Casos",
-      titulo: ["Todo lo que", "podemos hacer", "por vos."],
-      sub: "Cuatro disciplinas que se conectan en una visión integral. Estrategia, contenido, eventos y reputación — todo bajo el mismo equipo.",
-      kickerDisciplinas: "Nuestras disciplinas",
-      work: "Work",
-      casosTitulo: "Casos seleccionados",
+    works: {
+      eyebrow: "Nuestro trabajo",
+      titulo: ["El", "trabajo", "que nos define."],
+      sub: "Casos seleccionados de los últimos años. Marcas que confiaron en nosotros para crear algo extraordinario.",
       todos: "Todos",
       kickerClientes: "Confían en nosotros"
     },
+    queHacemos: {
+      eyebrow: "Servicios",
+      titulo: ["Todo lo que", "podemos hacer", "por vos."],
+      sub: "Cuatro disciplinas que se conectan en una visión integral. Estrategia, contenido, eventos y reputación — todo bajo el mismo equipo.",
+      kickerDisciplinas: "Nuestras disciplinas",
+      worksKicker: "Ver nuestro trabajo",
+      worksCuerpo: "Explorá los casos donde aplicamos estas disciplinas."
+    },
     caso: {
-      casos: "Casos",
-      cliente: "Cliente",
-      ano: "Año",
-      disciplinas: "Disciplinas",
+      casos: "Works",
+      cliente: "Cliente", ano: "Año", disciplinas: "Disciplinas",
       juntos: "¿Trabajamos juntos?",
       juntosCuerpo: "Contanos tu desafío y lo convertimos en algo extraordinario.",
-      anterior: "ANTERIOR",
-      siguiente: "SIGUIENTE"
+      anterior: "ANTERIOR", siguiente: "SIGUIENTE"
     },
     contacto: {
       eyebrow: "Contacto",
       titulo: ["Tenés una idea.", "Hagámosla extraordinaria."],
       sub: "Escribinos. Te respondemos en 24 horas hábiles con quien mejor entienda tu desafío.",
-      empecemos: "Empecemos.",
-      nombre: "Nombre",
-      nombrePh: "Tu nombre",
-      empresa: "Empresa",
-      empresaPh: "Tu empresa",
-      telefono: "Teléfono",
-      necesitas: "¿Qué necesitás?",
-      seleccionar: "Seleccioná un servicio",
-      otro: "Otro",
-      proyecto: "Tu proyecto",
-      proyectoPh: "Contanos qué tenés en mente...",
+      empecemos: "Empecemos.", nombre: "Nombre", nombrePh: "Tu nombre",
+      empresa: "Empresa", empresaPh: "Tu empresa", telefono: "Teléfono",
+      necesitas: "¿Qué necesitás?", seleccionar: "Seleccioná un servicio", otro: "Otro",
+      proyecto: "Tu proyecto", proyectoPh: "Contanos qué tenés en mente...",
       enviado: "MENSAJE ENVIADO — TE RESPONDEMOS EN 24H",
-      privacidad: "AL ENVIAR ACEPTÁS NUESTRA POLÍTICA DE PRIVACIDAD",
-      enviar: "Enviar"
+      privacidad: "AL ENVIAR ACEPTÁS NUESTRA POLÍTICA DE PRIVACIDAD", enviar: "Enviar"
     }
   },
 
   EN: {
-    nav: { home: "Home", xomos: "Xomos", work: "What we do", contact: "Contact" },
+    nav: { home: "Home", xomos: "Xomos", works: "Works", work: "What we do", contact: "Contact" },
     common: {
-      site: "Site",
-      offices: "Offices",
-      whatWeDo: "What we do",
-      whoWeAre: "Who we are",
-      services: "Services",
-      cases: "Cases",
-      clients: "Clients",
-      contact: "Contact us",
-      viewAll: "View all",
-      explore: "Explore",
-      seeReel: "See reel",
-      motionReel: "Reel · Motion · 2025",
-      start: "Let's start",
-      scroll: "Scroll to discover"
+      site: "Site", offices: "Offices", whatWeDo: "What we do", whoWeAre: "Who we are",
+      services: "Services", cases: "Cases", clients: "Clients", contact: "Contact us",
+      viewAll: "View all", explore: "Explore", seeReel: "See reel",
+      motionReel: "Reel · Motion · 2025", start: "Let's start", scroll: "Scroll to discover"
     },
-    footer: {
-      hablemos: "Let's talk —",
-      copyright: "Experience Marketing"
-    },
+    footer: { hablemos: "Let's talk —", copyright: "Experience Marketing" },
     home: {
       eyebrow: "Experience Marketing · Since 2005",
       titulo: ["We turn ideas", "into extraordinary", "experiences."],
@@ -156,6 +125,7 @@ window.XONA_I18N = {
       diferencialKicker: "What sets us apart",
       diferencialTitulo: "We think big. We execute in detail.",
       diferencialCuerpo: "We don't sell loose services. We design experience systems: every action speaks to the next, every surface reinforces the brand, every moment builds memory.",
+      kickerClientes: "They trust us",
       ctaKicker: "Let's start",
       ctaTitulo: ["Got an idea?", "Let's make it extraordinary."]
     },
@@ -179,69 +149,50 @@ window.XONA_I18N = {
         cuerpo: "We started in Buenos Aires in 2005 with a simple idea: brands need to stop talking and start building moments. That starting point took us to Bariloche, Santiago and Rome, with a team of over 40 people and projects in 12 countries."
       }
     },
-    queHacemos: {
-      eyebrow: "Services · Cases",
-      titulo: ["Everything we", "can do", "for you."],
-      sub: "Four disciplines that connect into an integrated vision. Strategy, content, events and reputation — all under one team.",
-      kickerDisciplinas: "Our disciplines",
-      work: "Work",
-      casosTitulo: "Selected cases",
+    works: {
+      eyebrow: "Our work",
+      titulo: ["The", "work", "that defines us."],
+      sub: "Selected cases from recent years. Brands that trusted us to create something extraordinary.",
       todos: "All",
       kickerClientes: "They trust us"
     },
+    queHacemos: {
+      eyebrow: "Services",
+      titulo: ["Everything we", "can do", "for you."],
+      sub: "Four disciplines that connect into an integrated vision. Strategy, content, events and reputation — all under one team.",
+      kickerDisciplinas: "Our disciplines",
+      worksKicker: "See our work",
+      worksCuerpo: "Explore the cases where we applied these disciplines."
+    },
     caso: {
-      casos: "Cases",
-      cliente: "Client",
-      ano: "Year",
-      disciplinas: "Disciplines",
+      casos: "Works",
+      cliente: "Client", ano: "Year", disciplinas: "Disciplines",
       juntos: "Shall we work together?",
       juntosCuerpo: "Tell us your challenge and we'll turn it into something extraordinary.",
-      anterior: "PREVIOUS",
-      siguiente: "NEXT"
+      anterior: "PREVIOUS", siguiente: "NEXT"
     },
     contacto: {
       eyebrow: "Contact",
       titulo: ["You have an idea.", "Let's make it extraordinary."],
       sub: "Write to us. We'll reply within 24 business hours with whoever best understands your challenge.",
-      empecemos: "Let's start.",
-      nombre: "Name",
-      nombrePh: "Your name",
-      empresa: "Company",
-      empresaPh: "Your company",
-      telefono: "Phone",
-      necesitas: "What do you need?",
-      seleccionar: "Select a service",
-      otro: "Other",
-      proyecto: "Your project",
-      proyectoPh: "Tell us what you have in mind...",
+      empecemos: "Let's start.", nombre: "Name", nombrePh: "Your name",
+      empresa: "Company", empresaPh: "Your company", telefono: "Phone",
+      necesitas: "What do you need?", seleccionar: "Select a service", otro: "Other",
+      proyecto: "Your project", proyectoPh: "Tell us what you have in mind...",
       enviado: "MESSAGE SENT — WE'LL REPLY WITHIN 24H",
-      privacidad: "BY SENDING YOU ACCEPT OUR PRIVACY POLICY",
-      enviar: "Send"
+      privacidad: "BY SENDING YOU ACCEPT OUR PRIVACY POLICY", enviar: "Send"
     }
   },
 
   IT: {
-    nav: { home: "Home", xomos: "Xomos", work: "Cosa facciamo", contact: "Contatto" },
+    nav: { home: "Home", xomos: "Xomos", works: "Works", work: "Cosa facciamo", contact: "Contatto" },
     common: {
-      site: "Sito",
-      offices: "Sedi",
-      whatWeDo: "Cosa facciamo",
-      whoWeAre: "Chi siamo",
-      services: "Servizi",
-      cases: "Casi",
-      clients: "Clienti",
-      contact: "Contattaci",
-      viewAll: "Vedi tutti",
-      explore: "Esplora",
-      seeReel: "Vedi reel",
-      motionReel: "Reel · Motion · 2025",
-      start: "Iniziamo",
-      scroll: "Scorri per scoprire"
+      site: "Sito", offices: "Sedi", whatWeDo: "Cosa facciamo", whoWeAre: "Chi siamo",
+      services: "Servizi", cases: "Casi", clients: "Clienti", contact: "Contattaci",
+      viewAll: "Vedi tutti", explore: "Esplora", seeReel: "Vedi reel",
+      motionReel: "Reel · Motion · 2025", start: "Iniziamo", scroll: "Scorri per scoprire"
     },
-    footer: {
-      hablemos: "Parliamone —",
-      copyright: "Marketing di Esperienze"
-    },
+    footer: { hablemos: "Parliamone —", copyright: "Marketing di Esperienze" },
     home: {
       eyebrow: "Marketing di Esperienze · Dal 2005",
       titulo: ["Trasformiamo idee", "in esperienze", "straordinarie."],
@@ -266,6 +217,7 @@ window.XONA_I18N = {
       diferencialKicker: "Cosa ci distingue",
       diferencialTitulo: "Pensiamo in grande. Eseguiamo nel dettaglio.",
       diferencialCuerpo: "Non vendiamo servizi sciolti. Progettiamo sistemi di esperienza: ogni azione parla con la successiva, ogni superficie rinforza il brand, ogni momento costruisce memoria.",
+      kickerClientes: "Si fidano di noi",
       ctaKicker: "Iniziamo",
       ctaTitulo: ["Hai un'idea?", "Rendiamola straordinaria."]
     },
@@ -289,44 +241,38 @@ window.XONA_I18N = {
         cuerpo: "Abbiamo iniziato a Buenos Aires nel 2005 con un'idea semplice: i brand devono smettere di parlare e iniziare a costruire momenti. Quel punto di partenza ci ha portato a Bariloche, Santiago e Roma, con un team di oltre 40 persone e progetti in 12 paesi."
       }
     },
-    queHacemos: {
-      eyebrow: "Servizi · Casi",
-      titulo: ["Tutto quello", "che possiamo", "fare per te."],
-      sub: "Quattro discipline che si connettono in una visione integrale. Strategia, contenuto, eventi e reputazione — tutto sotto lo stesso team.",
-      kickerDisciplinas: "Le nostre discipline",
-      work: "Work",
-      casosTitulo: "Casi selezionati",
+    works: {
+      eyebrow: "Il nostro lavoro",
+      titulo: ["Il", "lavoro", "che ci definisce."],
+      sub: "Casi selezionati degli ultimi anni. Brand che si sono fidati di noi per creare qualcosa di straordinario.",
       todos: "Tutti",
       kickerClientes: "Si fidano di noi"
     },
+    queHacemos: {
+      eyebrow: "Servizi",
+      titulo: ["Tutto quello", "che possiamo", "fare per te."],
+      sub: "Quattro discipline che si connettono in una visione integrale. Strategia, contenuto, eventi e reputazione — tutto sotto lo stesso team.",
+      kickerDisciplinas: "Le nostre discipline",
+      worksKicker: "Vedi il nostro lavoro",
+      worksCuerpo: "Esplora i casi in cui abbiamo applicato queste discipline."
+    },
     caso: {
-      casos: "Casi",
-      cliente: "Cliente",
-      ano: "Anno",
-      disciplinas: "Discipline",
+      casos: "Works",
+      cliente: "Cliente", ano: "Anno", disciplinas: "Discipline",
       juntos: "Lavoriamo insieme?",
       juntosCuerpo: "Raccontaci la tua sfida e la trasformiamo in qualcosa di straordinario.",
-      anterior: "PRECEDENTE",
-      siguiente: "SUCCESSIVO"
+      anterior: "PRECEDENTE", siguiente: "SUCCESSIVO"
     },
     contacto: {
       eyebrow: "Contatto",
       titulo: ["Hai un'idea.", "Rendiamola straordinaria."],
       sub: "Scrivici. Ti rispondiamo entro 24 ore lavorative con chi meglio capisce la tua sfida.",
-      empecemos: "Iniziamo.",
-      nombre: "Nome",
-      nombrePh: "Il tuo nome",
-      empresa: "Azienda",
-      empresaPh: "La tua azienda",
-      telefono: "Telefono",
-      necesitas: "Di cosa hai bisogno?",
-      seleccionar: "Seleziona un servizio",
-      otro: "Altro",
-      proyecto: "Il tuo progetto",
-      proyectoPh: "Raccontaci cosa hai in mente...",
+      empecemos: "Iniziamo.", nombre: "Nome", nombrePh: "Il tuo nome",
+      empresa: "Azienda", empresaPh: "La tua azienda", telefono: "Telefono",
+      necesitas: "Di cosa hai bisogno?", seleccionar: "Seleziona un servizio", otro: "Altro",
+      proyecto: "Il tuo progetto", proyectoPh: "Raccontaci cosa hai in mente...",
       enviado: "MESSAGGIO INVIATO — TI RISPONDIAMO ENTRO 24H",
-      privacidad: "INVIANDO ACCETTI LA NOSTRA POLITICA SULLA PRIVACY",
-      enviar: "Invia"
+      privacidad: "INVIANDO ACCETTI LA NOSTRA POLITICA SULLA PRIVACY", enviar: "Invia"
     }
   }
 };

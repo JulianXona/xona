@@ -27,13 +27,11 @@ function PageXomos() {
     <div>
       <PageHero eyebrow={x.eyebrow} title={x.titulo} sub={x.sub} accent />
 
-      {/* Big number */}
       <section className="section-pad" style={{ borderTop: '1px solid var(--fg-faint)', borderBottom: '1px solid var(--fg-faint)', textAlign: 'center', padding: 'clamp(3rem, 9vw, 7rem) var(--px)' }}>
         <div className="r" style={{ fontFamily: 'var(--f-serif)', fontStyle: 'italic', fontSize: 'clamp(7rem, 22vw, 18rem)', lineHeight: '0.85', color: 'transparent', WebkitTextStroke: '1px var(--gold)', fontWeight: 400 }}>20</div>
         <div className="mono r r-1" style={{ marginTop: '1rem', color: 'var(--fg-dim)' }}>{x.bigNumLabel}</div>
       </section>
 
-      {/* Cultura */}
       <section className="section-pad">
         <div className="maxw">
           <div className="r" style={{ marginBottom: '2.5rem' }}>
@@ -62,7 +60,6 @@ function PageXomos() {
         `}</style>
       </section>
 
-      {/* Historia */}
       <section className="section-pad" style={{ background: 'var(--bg-2)' }}>
         <div className="maxw historia-grid">
           <div className="r r-1" style={{ aspectRatio: '4/3' }}>
@@ -75,7 +72,7 @@ function PageXomos() {
               <span className="serif-it gold">{x.historia.titulo.split('.')[1]}.</span>
             </h2>
             <p className="lead r r-2" style={{ marginBottom: '1.8rem' }}>{x.historia.cuerpo}</p>
-            <Link to="que-hacemos" className="btn r r-3">{t.common.whatWeDo} <Arrow /></Link>
+            <Link to="works" className="btn r r-3">{t.nav.works} <Arrow /></Link>
           </div>
         </div>
         <style>{`
@@ -89,12 +86,9 @@ function PageXomos() {
   );
 }
 
-/* ─── QUÉ HACEMOS ─── */
-function PageQueHacemos() {
-  const { query } = useRouter();
+/* ─── WORKS ─── */
+function PageWorks() {
   const { t } = useLang();
-  const focusId = query.s;
-  const servicios = window.XONA.servicios;
   const casos = window.XONA.casos;
   const tags = ['todos', ...new Set(casos.flatMap(c => c.tags))];
   const [filter, setFilter] = useState('todos');
@@ -102,9 +96,69 @@ function PageQueHacemos() {
 
   return (
     <div>
+      <PageHero eyebrow={t.works.eyebrow} title={t.works.titulo} sub={t.works.sub} accent />
+
+      <section className="section-pad" style={{ background: 'var(--bg-2)' }}>
+        <div className="maxw">
+          <div className="filtros r" style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+            {tags.map(tg => (
+              <button key={tg} className={`filtro-btn ${filter === tg ? 'is-active' : ''}`} onClick={() => setFilter(tg)}>
+                {tg === 'todos' ? t.works.todos : tg}
+              </button>
+            ))}
+          </div>
+          <div className="cases-grid">
+            {filtered.map((c, i) => (
+              <Link key={c.id} to={`caso?id=${c.id}`} className="case-card r" style={{ transitionDelay: `${(i%3)*0.08}s` }} data-cursor-hover>
+                <div style={{ aspectRatio: '4/5', position: 'relative' }}>
+                  <Img src={c.hero} ratio="4/5" treatment="cinematic" />
+                  <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: c.color, zIndex: 4 }}></div>
+                </div>
+                <div className="case-card-info">
+                  <div className="mono gold">{c.cliente} · {c.year}</div>
+                  <h3 style={{ marginTop: '0.5rem' }}>{c.titulo}</h3>
+                  <div className="tag-list" style={{ marginTop: '0.8rem' }}>
+                    {c.tags.map(tg => <span key={tg} className="tag">{tg}</span>)}
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <style>{`
+          .filtro-btn { font-family: var(--f-mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.5rem 0.9rem; border: 1px solid var(--fg-faint); border-radius: 999px; color: var(--fg-mute); transition: all .3s; cursor: pointer; }
+          .filtro-btn:hover { color: var(--fg); border-color: var(--gold-line); }
+          .filtro-btn.is-active { color: var(--bg); background: var(--gold); border-color: var(--gold); }
+          .cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2vw, 2rem); }
+          .case-card { display: flex; flex-direction: column; gap: 1rem; transition: opacity .9s, transform .9s; }
+          @media (max-width: 900px) { .cases-grid { grid-template-columns: 1fr 1fr; } }
+          @media (max-width: 560px) { .cases-grid { grid-template-columns: 1fr; } }
+        `}</style>
+      </section>
+
+      <section style={{ padding: 'clamp(2.5rem, 6vw, 5rem) 0', borderTop: '1px solid var(--fg-faint)' }}>
+        <div style={{ padding: '0 var(--px)', marginBottom: '1.5rem' }}>
+          <div className="eyebrow">{t.works.kickerClientes}</div>
+        </div>
+        <ClientesMarquee />
+      </section>
+
+      <HomeCTA />
+    </div>
+  );
+}
+
+/* ─── QUÉ HACEMOS — solo servicios ─── */
+function PageQueHacemos() {
+  const { query } = useRouter();
+  const { t } = useLang();
+  const focusId = query.s;
+  const servicios = window.XONA.servicios;
+
+  return (
+    <div>
       <PageHero eyebrow={t.queHacemos.eyebrow} title={t.queHacemos.titulo} accent sub={t.queHacemos.sub} />
 
-      {/* Servicios — listing detallado */}
       <section className="section-pad">
         <div className="maxw">
           <div className="eyebrow r" style={{ marginBottom: '1.5rem' }}>{t.queHacemos.kickerDisciplinas}</div>
@@ -158,56 +212,10 @@ function PageQueHacemos() {
         `}</style>
       </section>
 
-      {/* Casos */}
-      <section className="section-pad" style={{ background: 'var(--bg-2)' }}>
-        <div className="maxw">
-          <div className="flex between" style={{ alignItems: 'flex-end', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}>
-            <div className="r">
-              <div className="eyebrow" style={{ marginBottom: '1rem' }}>{t.queHacemos.work}</div>
-              <h2>{t.queHacemos.casosTitulo}</h2>
-            </div>
-          </div>
-          <div className="filtros r" style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
-            {tags.map(tg => (
-              <button key={tg} className={`filtro-btn ${filter === tg ? 'is-active' : ''}`} onClick={() => setFilter(tg)}>
-                {tg === 'todos' ? t.queHacemos.todos : tg}
-              </button>
-            ))}
-          </div>
-          <div className="cases-grid">
-            {filtered.map((c, i) => (
-              <Link key={c.id} to={`caso?id=${c.id}`} className="case-card r" style={{ transitionDelay: `${(i%3)*0.08}s` }} data-cursor-hover>
-                <div style={{ aspectRatio: '4/5', position: 'relative' }}>
-                  <Img src={c.hero} ratio="4/5" treatment="cinematic" />
-                  <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: c.color, zIndex: 4 }}></div>
-                </div>
-                <div className="case-card-info">
-                  <div className="mono gold">{c.cliente} · {c.year}</div>
-                  <h3 style={{ marginTop: '0.5rem' }}>{c.titulo}</h3>
-                  <div className="tag-list" style={{ marginTop: '0.8rem' }}>
-                    {c.tags.map(tg => <span key={tg} className="tag">{tg}</span>)}
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-        <style>{`
-          .filtro-btn { font-family: var(--f-mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.5rem 0.9rem; border: 1px solid var(--fg-faint); border-radius: 999px; color: var(--fg-mute); transition: all .3s; cursor: pointer; }
-          .filtro-btn:hover { color: var(--fg); border-color: var(--gold-line); }
-          .filtro-btn.is-active { color: var(--bg); background: var(--gold); border-color: var(--gold); }
-          .cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2vw, 2rem); }
-          .case-card { display: flex; flex-direction: column; gap: 1rem; transition: opacity .9s, transform .9s; }
-          @media (max-width: 900px) { .cases-grid { grid-template-columns: 1fr 1fr; } }
-          @media (max-width: 560px) { .cases-grid { grid-template-columns: 1fr; } }
-        `}</style>
-      </section>
-
-      <section style={{ padding: 'clamp(2.5rem, 6vw, 5rem) 0', borderTop: '1px solid var(--fg-faint)' }}>
-        <div style={{ padding: '0 var(--px)', marginBottom: '1.5rem' }}>
-          <div className="eyebrow">{t.queHacemos.kickerClientes}</div>
-        </div>
-        <ClientesMarquee />
+      <section style={{ borderTop: '1px solid var(--fg-faint)', padding: 'clamp(3rem, 7vw, 6rem) var(--px)', textAlign: 'center' }}>
+        <div className="eyebrow" style={{ marginBottom: '1.2rem' }}>{t.queHacemos.worksKicker}</div>
+        <p className="lead" style={{ marginBottom: '2rem', color: 'var(--fg-dim)' }}>{t.queHacemos.worksCuerpo}</p>
+        <Link to="works" className="btn">{t.nav.works} <Arrow /></Link>
       </section>
 
       <HomeCTA />
@@ -236,7 +244,7 @@ function PageCaso() {
         <div style={{ position: 'relative', zIndex: 2, width: '100%', maxWidth: '1440px', margin: '0 auto' }}>
           <div className="mono dim" style={{ marginBottom: '1.5rem', display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
             <Link to="home">{t.nav.home}</Link><span className="gold">·</span>
-            <Link to="que-hacemos">{t.caso.casos}</Link><span className="gold">·</span>
+            <Link to="works">{t.nav.works}</Link><span className="gold">·</span>
             <span>{caso.titulo}</span>
           </div>
           <div className="eyebrow r" style={{ marginBottom: '1rem' }}>{caso.cliente} · {caso.year}</div>
@@ -407,4 +415,4 @@ function PageContacto() {
   );
 }
 
-Object.assign(window, { PageXomos, PageQueHacemos, PageCaso, PageContacto });
+Object.assign(window, { PageXomos, PageWorks, PageQueHacemos, PageCaso, PageContacto });

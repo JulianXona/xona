@@ -18,10 +18,11 @@ function Nav() {
   }, [open]);
 
   const links = [
-    { to: 'home', label: t.nav.home },
-    { to: 'xomos', label: t.nav.xomos },
+    { to: 'home',        label: t.nav.home },
+    { to: 'xomos',       label: t.nav.xomos },
+    { to: 'works',       label: t.nav.works },
     { to: 'que-hacemos', label: t.nav.work },
-    { to: 'contacto', label: t.nav.contact }
+    { to: 'contacto',    label: t.nav.contact }
   ];
 
   return (
@@ -81,10 +82,11 @@ function Footer() {
   const g = window.XONA.global;
   const { t } = useLang();
   const links = [
-    { to: 'home', label: t.nav.home },
-    { to: 'xomos', label: t.nav.xomos },
+    { to: 'home',        label: t.nav.home },
+    { to: 'xomos',       label: t.nav.xomos },
+    { to: 'works',       label: t.nav.works },
     { to: 'que-hacemos', label: t.nav.work },
-    { to: 'contacto', label: t.nav.contact }
+    { to: 'contacto',    label: t.nav.contact }
   ];
   return (
     <footer className="footer">
@@ -134,22 +136,50 @@ function Footer() {
   );
 }
 
-/* ─── Clientes marquee ─── */
+/* ─── Clientes marquee con logos ─── */
 function ClientesMarquee({ size = 'L' }) {
-  const items = window.XONA.clientes;
-  const sized = size === 'L'
-    ? items.map((c,i) => i % 4 === 0 ? { c, serif: true } : { c, serif: false })
-    : items.map((c) => ({ c, serif: false }));
+  const clientes = [
+    { nombre: "Accenture",       logo: "images/clientes/Accenture.png" },
+    { nombre: "Avon",            logo: "images/clientes/Avon.png" },
+    { nombre: "Bayer",           logo: "images/clientes/bayer.png" },
+    { nombre: "Conmebol",        logo: "images/clientes/Conmebol.png" },
+    { nombre: "Ethicon",         logo: "images/clientes/Ethicon.png" },
+    { nombre: "Galicia Seguros", logo: "images/clientes/GaliciaSeguros.png" },
+    { nombre: "Huawei",          logo: "images/clientes/Huawei.png" },
+    { nombre: "IBM",             logo: "images/clientes/IBM.png" },
+    { nombre: "L'Oréal",         logo: "images/clientes/Loreal.png" },
+    { nombre: "Mirgor",          logo: "images/clientes/Mirgor.png" },
+    { nombre: "Movistar",        logo: "images/clientes/Movistar.png" },
+    { nombre: "Naranja",         logo: "images/clientes/Naranja.png" },
+    { nombre: "Novartis",        logo: "images/clientes/novartis.png" },
+    { nombre: "Peugeot",         logo: "images/clientes/peugeot.png" },
+    { nombre: "Samsung",         logo: "images/clientes/Samsung.png" },
+    { nombre: "Sanofi",          logo: "images/clientes/Sanofi.png" },
+    { nombre: "SAP",             logo: "images/clientes/SAP.png" },
+    { nombre: "Telecom",         logo: "images/clientes/telecom.png" },
+    { nombre: "Volvo",           logo: "images/clientes/volvo.png" },
+    { nombre: "Zurich Santander",logo: "images/clientes/Zurich-Santander.png" }
+  ];
+
+  const h = size === 'L' ? '44px' : '32px';
+
   const Strip = () => (
-    <div className="marquee-track">
-      {sized.map((it, i) => (
-        <span key={i} className={`marquee-item ${it.serif ? 'serif' : ''}`}>
-          {it.c}
-          <span className="dot"></span>
+    <div className="marquee-track" style={{ animationDuration: size === 'L' ? '40s' : '30s' }}>
+      {clientes.map((c, i) => (
+        <span key={i} className="marquee-item" style={{ display: 'inline-flex', alignItems: 'center' }}>
+          <img
+            src={c.logo}
+            alt={c.nombre}
+            style={{ height: h, width: 'auto', maxWidth: '120px', objectFit: 'contain', filter: 'brightness(0) invert(1)', opacity: 0.55, transition: 'opacity .3s' }}
+            onMouseEnter={e => e.target.style.opacity = 1}
+            onMouseLeave={e => e.target.style.opacity = 0.55}
+          />
+          <span className="dot" style={{ margin: '0 clamp(1.5rem, 4vw, 3rem)' }}></span>
         </span>
       ))}
     </div>
   );
+
   return (
     <div className="marquee" style={{ padding: '2rem 0' }}>
       <Strip /><Strip />
