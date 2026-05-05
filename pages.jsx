@@ -107,9 +107,9 @@ function PageWorks() {
               </button>
             ))}
           </div>
-          <div className="cases-grid">
+          <div key={filter} className="cases-grid">
             {filtered.map((c, i) => (
-              <Link key={c.id} to={`caso?id=${c.id}`} className="case-card r" style={{ transitionDelay: `${(i%3)*0.08}s` }} data-cursor-hover>
+              <Link key={c.id} to={`caso?id=${c.id}`} className="case-card" style={{ transitionDelay: `${(i%3)*0.08}s` }} data-cursor-hover>
                 <div style={{ aspectRatio: '4/5', position: 'relative' }}>
                   <Img src={c.hero} ratio="4/5" treatment="cinematic" />
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: c.color, zIndex: 4 }}></div>

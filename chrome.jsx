@@ -164,24 +164,24 @@ function ClientesMarquee({ size = 'L' }) {
   const h = size === 'L' ? '44px' : '32px';
 
   const Strip = () => (
-    <div className="marquee-track" style={{ animationDuration: size === 'L' ? '40s' : '30s' }}>
+    <div className="marquee-track" style={{ animationDuration: size === 'L' ? '50s' : '35s', display: 'flex', alignItems: 'center' }}>
       {clientes.map((c, i) => (
-        <span key={i} className="marquee-item" style={{ display: 'inline-flex', alignItems: 'center' }}>
+        <span key={i} style={{ display: 'inline-flex', alignItems: 'center', flexShrink: 0 }}>
           <img
             src={c.logo}
             alt={c.nombre}
-            style={{ height: h, width: 'auto', maxWidth: '120px', objectFit: 'contain', filter: 'brightness(0) invert(1)', opacity: 0.55, transition: 'opacity .3s' }}
+            style={{ display: 'block', height: h, width: 'auto', maxWidth: '130px', objectFit: 'contain', filter: 'brightness(0) invert(1)', opacity: 0.45, transition: 'opacity .3s' }}
             onMouseEnter={e => e.target.style.opacity = 1}
-            onMouseLeave={e => e.target.style.opacity = 0.55}
+            onMouseLeave={e => e.target.style.opacity = 0.45}
           />
-          <span className="dot" style={{ margin: '0 clamp(1.5rem, 4vw, 3rem)' }}></span>
+          <span style={{ display: 'inline-block', width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold)', opacity: 0.5, margin: '0 clamp(2rem, 5vw, 4rem)', flexShrink: 0 }}></span>
         </span>
       ))}
     </div>
   );
 
   return (
-    <div className="marquee" style={{ padding: '2rem 0' }}>
+    <div className="marquee" style={{ padding: '1.5rem 0', overflow: 'hidden' }}>
       <Strip /><Strip />
     </div>
   );
