@@ -231,7 +231,7 @@ function PageCaso() {
     <div>
       <section style={{ position: 'relative', minHeight: '85vh', display: 'flex', alignItems: 'flex-end', padding: 'clamp(7rem, 14vw, 11rem) var(--px) clamp(2.5rem, 6vw, 5rem)', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0 }}>
-          <Img src={caso.hero} treatment="cinematic" parallax style={{ width: '100%', height: '100%' }} />
+          <Img src={caso.bg || caso.hero} treatment="cinematic" parallax style={{ width: '100%', height: '100%' }} />
         </div>
         <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(to bottom, rgba(10,10,10,0.4) 0%, rgba(10,10,10,0.35) 50%, rgba(10,10,10,0.95) 100%)`, zIndex: 1 }}></div>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: caso.color, zIndex: 1 }}></div>
@@ -254,8 +254,18 @@ function PageCaso() {
           <div>
             <h2 className="r" style={{ marginBottom: '1.5rem', fontSize: 'clamp(1.4rem, 3.5vw, 2.5rem)' }}>{caso.corta}</h2>
             <p className="lead r r-1" style={{ marginBottom: '1.8rem' }}>{caso.larga}</p>
-            <div className="r r-2" style={{ marginTop: '2.5rem', aspectRatio: '16/9' }}>
-              <Img src={caso.gallery[0]} ratio="16/9" treatment="cinematic" parallax caption={`${caso.cliente.toUpperCase()} · CASE FILM`} />
+            <div className="r r-2" style={{ marginTop: '2.5rem', aspectRatio: '16/9', position: 'relative', overflow: 'hidden' }}>
+              {caso.video ? (
+                <iframe
+                  src={caso.video}
+                  title={caso.titulo}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
+                />
+              ) : (
+                <Img src={caso.gallery[0]} ratio="16/9" treatment="cinematic" parallax caption={`${caso.cliente.toUpperCase()} · CASE FILM`} />
+              )}
             </div>
             <div className="caso-making" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px', marginTop: '2px' }}>
               <div className="r" style={{ aspectRatio: '4/3' }}>

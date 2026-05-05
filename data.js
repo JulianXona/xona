@@ -107,11 +107,13 @@ window.XONA = {
       corta:"Alzamos la voz de mujeres emblemáticas de la historia argentina como core de un lanzamiento.",
       larga:"Una campaña que puso en valor el legado de mujeres que transformaron la historia argentina, conectando emocionalmente con las audiencias en una fecha clave.",
       tags:["Branded Content","PR"], color:"#D44C7A",
-      hero:"https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1800&q=80",
+      hero:"images/casos/avon/hero.jpg",
+      bg:"images/casos/avon/bg.jpg",
+      video:"https://www.youtube.com/embed/-zETfrlwUrg?rel=0&modestbranding=1&showinfo=0",
       gallery:[
-        "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1200&q=80",
-        "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=1200&q=80",
-        "https://images.unsplash.com/photo-1581338834647-b0fb40704e21?w=1200&q=80"
+        "images/casos/avon/gallery-1.jpg",
+        "images/casos/avon/gallery-2.jpg",
+        "images/casos/avon/gallery-3.jpg"
       ] },
     { id:"samsung-house", titulo:"SAMSUNG HOUSE", cliente:"Samsung", year:"2019",
       corta:"El primer flagship físico de Samsung en el país. Un antes y un después en cómo la marca se relaciona con sus clientes.",
