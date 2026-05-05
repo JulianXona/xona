@@ -10,13 +10,13 @@ window.XONA_I18N = {
     },
     footer: { hablemos: "Hablemos —", copyright: "Marketing de Experiencias" },
     home: {
-      eyebrow: "Marketing de Experiencias · Desde 2005",
+      eyebrow: "Marketing de Experiencias · Desde 2001",
       titulo: ["Convertimos ideas", "en experiencias", "extraordinarias."],
       sub: "Somos una agencia de marketing de experiencias con sedes en Buenos Aires, Bariloche, Santiago de Chile y Roma. Estrategia, creatividad y producción bajo un mismo equipo.",
       manifesto: "Manifiesto",
       frase: "Una experiencia bien diseñada se recuerda mil veces. Por eso pensamos cada detalle, cuidamos cada momento y diseñamos viajes emocionales que dejan huella. Lo extraordinario no es la excepción: es nuestro punto de partida.",
       stats: [
-        { n: "20+", l: "Años de trayectoria" },
+        { n: "25+", l: "Años de trayectoria" },
         { n: "150+", l: "Clientes globales" },
         { n: "04", l: "Oficinas internacionales" },
         { n: "1.2K", l: "Experiencias producidas" }
@@ -41,8 +41,7 @@ window.XONA_I18N = {
       eyebrow: "Quiénes somos",
       titulo: ["Somos curiosos,", "creativos,", "implacables."],
       sub: "Un equipo multidisciplinario que cruza estrategia, creatividad y producción. Operamos como un colectivo: sin silos, sin egos, con foco obsesivo en el resultado.",
-      bigNumLabel: "AÑOS HACIENDO LO EXTRAORDINARIO",
-      culturaKicker: "Cultura",
+      bigNumLabel: "AÑOS HACIENDO LO EXTRAORDINARIO",      culturaKicker: "Cultura",
       pregunta: "¿Qué nos une? Una obsesión compartida por el detalle y por las experiencias que dejan huella.",
       valores: [
         { n: "01", t: "Curiosidad", d: "Preguntamos antes de proponer. Investigamos antes de ejecutar. Nada es obvio." },
@@ -102,13 +101,13 @@ window.XONA_I18N = {
     },
     footer: { hablemos: "Let's talk —", copyright: "Experience Marketing" },
     home: {
-      eyebrow: "Experience Marketing · Since 2005",
+      eyebrow: "Experience Marketing · Since 2001",
       titulo: ["We turn ideas", "into extraordinary", "experiences."],
       sub: "We are an experience marketing agency with offices in Buenos Aires, Bariloche, Santiago and Rome. Strategy, creativity and production under one roof.",
       manifesto: "Manifesto",
       frase: "A well-designed experience is remembered a thousand times. That's why we think through every detail, care for every moment, and craft emotional journeys that leave a mark. The extraordinary is not the exception: it's our starting point.",
       stats: [
-        { n: "20+", l: "Years in business" },
+        { n: "25+", l: "Years in business" },
         { n: "150+", l: "Global clients" },
         { n: "04", l: "International offices" },
         { n: "1.2K", l: "Experiences produced" }
@@ -194,13 +193,13 @@ window.XONA_I18N = {
     },
     footer: { hablemos: "Parliamone —", copyright: "Marketing di Esperienze" },
     home: {
-      eyebrow: "Marketing di Esperienze · Dal 2005",
+      eyebrow: "Marketing di Esperienze · Dal 2001",
       titulo: ["Trasformiamo idee", "in esperienze", "straordinarie."],
       sub: "Siamo un'agenzia di marketing di esperienze con sedi a Buenos Aires, Bariloche, Santiago e Roma. Strategia, creatività e produzione sotto lo stesso tetto.",
       manifesto: "Manifesto",
       frase: "Un'esperienza ben progettata si ricorda mille volte. Per questo curiamo ogni dettaglio, proteggiamo ogni momento e disegniamo viaggi emotivi che lasciano il segno. Lo straordinario non è l'eccezione: è il nostro punto di partenza.",
       stats: [
-        { n: "20+", l: "Anni di esperienza" },
+        { n: "25+", l: "Anni di esperienza" },
         { n: "150+", l: "Clienti globali" },
         { n: "04", l: "Sedi internazionali" },
         { n: "1.2K", l: "Esperienze prodotte" }

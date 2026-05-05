@@ -63,7 +63,7 @@ function HomeCases() {
               {t.home.casosTitulo[0]} <span className="serif-it gold">{t.home.casosTitulo[1]}</span> {t.home.casosTitulo[2]}
             </h2>
           </div>
-          <Link to="que-hacemos" className="btn r r-2">{t.common.viewAll} <Arrow /></Link>
+          <Link to="works" className="btn r r-2">{t.common.viewAll} <Arrow /></Link>
         </div>
 
         <div className="cases-list">
@@ -261,8 +261,14 @@ function HomeFilosofia() {
           <p className="lead" style={{ marginBottom: '2rem' }}>{t.home.diferencialCuerpo}</p>
           <Link to="xomos" className="btn">{t.common.whoWeAre} <Arrow /></Link>
         </div>
-        <div className="r r-1" style={{ aspectRatio: '4/5' }}>
-          <Img src={window.XONA.imagenes.servicios.branded} ratio="4/5" treatment="cinematic" parallax caption="REEL · BACKSTAGE" />
+        <div className="r r-1" style={{ aspectRatio: '16/9', position: 'relative', overflow: 'hidden' }}>
+          <iframe
+            src="https://player.vimeo.com/video/468557889?color=c9a96e&title=0&byline=0&portrait=0"
+            title="XONA Reel Backstage"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
+          />
         </div>
       </div>
       <style>{`
@@ -359,7 +365,7 @@ function HomeA() {
           </h1>
           <div className="hero-bottom-grid">
             <p className="lead r r-3">{t.home.sub}</p>
-            <div className="r r-4 hero-buttons">
+            <div className="r r-4 hero-buttons" style={{ marginTop: 'clamp(1.5rem, 3vw, 2.5rem)', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <Link to="que-hacemos" className="btn">{t.common.whatWeDo} <Arrow /></Link>
               <Link to="contacto" className="btn ghost">{t.common.contact}</Link>
             </div>
@@ -373,10 +379,18 @@ function HomeA() {
 
       <HomeStats />
 
+      <HomeCases />
+
       <section className="section-pad">
         <div className="maxw propuesta-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(2rem,6vw,6rem)', alignItems: 'center' }}>
-          <div className="r r-1" style={{ aspectRatio: '4/5' }}>
-            <Img src={window.XONA.imagenes.homeHero[1]} ratio="4/5" treatment="cinematic" parallax caption="REEL · 2025" />
+          <div className="r r-1" style={{ aspectRatio: '16/9', position: 'relative', overflow: 'hidden' }}>
+            <iframe
+              src="https://www.youtube.com/embed/6fd6jevtPtc?rel=0&modestbranding=1"
+              title="XONA Reel"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
+            />
           </div>
           <div>
             <div className="eyebrow r" style={{ marginBottom: '1.5rem' }}>{t.home.propuestaKicker}</div>
@@ -395,15 +409,17 @@ function HomeA() {
         `}</style>
       </section>
 
-      <HomeFrase />
-      <HomeMosaic />
-      <HomeCases />
       <HomeServiciosScrollH />
+
+      <HomeFrase />
+
       <HomeFilosofia />
+
+      <HomeMosaic />
 
       <section style={{ padding: 'clamp(2.5rem, 6vw, 5rem) 0', borderTop: '1px solid var(--fg-faint)' }}>
         <div style={{ padding: '0 var(--px)', marginBottom: '2rem' }}>
-          <div className="eyebrow">{t.common.clients}</div>
+          <div className="eyebrow">{t.home.kickerClientes}</div>
         </div>
         <ClientesMarquee />
       </section>

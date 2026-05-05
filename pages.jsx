@@ -28,7 +28,7 @@ function PageXomos() {
       <PageHero eyebrow={x.eyebrow} title={x.titulo} sub={x.sub} accent />
 
       <section className="section-pad" style={{ borderTop: '1px solid var(--fg-faint)', borderBottom: '1px solid var(--fg-faint)', textAlign: 'center', padding: 'clamp(3rem, 9vw, 7rem) var(--px)' }}>
-        <div className="r" style={{ fontFamily: 'var(--f-serif)', fontStyle: 'italic', fontSize: 'clamp(7rem, 22vw, 18rem)', lineHeight: '0.85', color: 'transparent', WebkitTextStroke: '1px var(--gold)', fontWeight: 400 }}>20</div>
+        <div className="r" style={{ fontFamily: 'var(--f-serif)', fontStyle: 'italic', fontSize: 'clamp(7rem, 22vw, 18rem)', lineHeight: '0.85', color: 'transparent', WebkitTextStroke: '1px var(--gold)', fontWeight: 400 }}>25</div>
         <div className="mono r r-1" style={{ marginTop: '1rem', color: 'var(--fg-dim)' }}>{x.bigNumLabel}</div>
       </section>
 
@@ -212,12 +212,6 @@ function PageQueHacemos() {
         `}</style>
       </section>
 
-      <section style={{ borderTop: '1px solid var(--fg-faint)', padding: 'clamp(3rem, 7vw, 6rem) var(--px)', textAlign: 'center' }}>
-        <div className="eyebrow" style={{ marginBottom: '1.2rem' }}>{t.queHacemos.worksKicker}</div>
-        <p className="lead" style={{ marginBottom: '2rem', color: 'var(--fg-dim)' }}>{t.queHacemos.worksCuerpo}</p>
-        <Link to="works" className="btn">{t.nav.works} <Arrow /></Link>
-      </section>
-
       <HomeCTA />
     </div>
   );
@@ -399,7 +393,7 @@ function PageContacto() {
         .contacto-wrap { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; }
         .contacto-left { padding: clamp(6rem, 12vw, 11rem) var(--px) 2.5rem; border-right: 1px solid var(--fg-faint); display: flex; flex-direction: column; justify-content: space-between; gap: 3rem; background: linear-gradient(135deg, var(--gold-soft), transparent 70%); }
         .contacto-right { padding: clamp(6rem, 12vw, 11rem) var(--px) 2.5rem; display: flex; flex-direction: column; justify-content: center; }
-        .contacto-mail { font-size: clamp(1.3rem, 3vw, 2.2rem); display: inline-flex; gap: 0.5rem; align-items: center; margin-bottom: 2.5rem; word-break: break-all; }
+        .contacto-mail { font-size: clamp(1rem, 2.2vw, 1.8rem); display: inline-flex; gap: 0.5rem; align-items: center; margin-bottom: 2.5rem; white-space: nowrap; }
         .contacto-phones { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
         @media (max-width: 900px) {
