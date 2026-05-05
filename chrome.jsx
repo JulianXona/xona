@@ -161,7 +161,7 @@ function ClientesMarquee({ size = 'L' }) {
     { nombre: "Zurich Santander",logo: "images/clientes/Zurich-Santander.png" }
   ];
 
-  const h = size === 'L' ? '44px' : '32px';
+  const h = size === 'L' ? '36px' : '28px';
 
   const Strip = () => (
     <div className="marquee-track" style={{ animationDuration: size === 'L' ? '50s' : '35s', display: 'flex', alignItems: 'center' }}>
@@ -170,9 +170,9 @@ function ClientesMarquee({ size = 'L' }) {
           <img
             src={c.logo}
             alt={c.nombre}
-            style={{ display: 'block', height: h, width: 'auto', maxWidth: '130px', objectFit: 'contain', filter: 'brightness(0) invert(1)', opacity: 0.45, transition: 'opacity .3s' }}
-            onMouseEnter={e => e.target.style.opacity = 1}
-            onMouseLeave={e => e.target.style.opacity = 0.45}
+            style={{ display: 'block', height: h, width: 'auto', maxWidth: '130px', objectFit: 'contain', filter: 'grayscale(1) brightness(10)', opacity: 0.55, transition: 'opacity .3s' }}
+            onMouseEnter={e => { e.target.style.opacity = 1; }}
+            onMouseLeave={e => { e.target.style.opacity = 0.55; }}
           />
           <span style={{ display: 'inline-block', width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold)', opacity: 0.5, margin: '0 clamp(2rem, 5vw, 4rem)', flexShrink: 0 }}></span>
         </span>
