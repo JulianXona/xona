@@ -28,7 +28,7 @@ function Nav() {
     <>
       <nav className={`nav ${scrolled ? 'scrolled' : ''} ${open ? 'menu-open' : ''}`}>
         <Link to="home" className="nav-logo">
-          <img src="xona/logo.png" alt="Xona" />
+          <img src="logo.png" alt="Xona" />
           <span className="dot"></span>
         </Link>
         <div className="nav-links">
