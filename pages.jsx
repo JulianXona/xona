@@ -267,14 +267,15 @@ function PageCaso() {
                 <Img src={caso.gallery[0]} ratio="16/9" treatment="cinematic" parallax caption={`${caso.cliente.toUpperCase()} · CASE FILM`} />
               )}
             </div>
-            <div className="caso-making" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px', marginTop: '2px' }}>
-              <div className="r" style={{ aspectRatio: '4/3' }}>
-                <Img src={caso.gallery[1]} ratio="4/3" treatment="cinematic" caption="MAKING OF · 01" />
+            {caso.gallery && caso.gallery.length > 0 && (
+              <div className="caso-gallery" style={{ marginTop: '2px' }}>
+                {caso.gallery.map((img, i) => (
+                  <div key={i} className="r" style={{ aspectRatio: '4/3' }}>
+                    <Img src={img} ratio="4/3" treatment="cinematic" />
+                  </div>
+                ))}
               </div>
-              <div className="r" style={{ aspectRatio: '4/3' }}>
-                <Img src={caso.gallery[2]} ratio="4/3" treatment="cinematic" caption="MAKING OF · 02" />
-              </div>
-            </div>
+            )}
           </div>
           <aside className="caso-aside">
             <div className="sidebar-card r">
@@ -301,12 +302,13 @@ function PageCaso() {
           .caso-aside { position: sticky; top: 6rem; display: flex; flex-direction: column; gap: 1rem; }
           .sidebar-card { padding: 1.3rem; border: 1px solid var(--fg-faint); transition: opacity .9s, transform .9s, border-color .3s; }
           .sidebar-card:hover { border-color: var(--gold-line); }
+          .caso-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+          .caso-gallery > div:first-child:nth-last-child(odd) { grid-column: span 2; }
           @media (max-width: 900px) {
             .caso-body-grid { grid-template-columns: 1fr; }
             .caso-aside { position: static; }
-          }
-          @media (max-width: 560px) {
-            .caso-making { grid-template-columns: 1fr !important; }
+            .caso-gallery { grid-template-columns: 1fr; }
+            .caso-gallery > div:first-child:nth-last-child(odd) { grid-column: span 1; }
           }
         `}</style>
       </section>
