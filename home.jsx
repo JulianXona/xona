@@ -263,7 +263,7 @@ function HomeFilosofia() {
         </div>
         <div className="r r-1" style={{ aspectRatio: '16/9', position: 'relative', overflow: 'hidden' }}>
           <iframe
-            src="https://player.vimeo.com/video/468557889?color=c9a96e&title=0&byline=0&portrait=0"
+            src="https://player.vimeo.com/video/468557889?background=1&autoplay=1&loop=1&muted=1"
             title="XONA Reel Backstage"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
@@ -385,7 +385,7 @@ function HomeA() {
         <div className="maxw propuesta-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(2rem,6vw,6rem)', alignItems: 'center' }}>
           <div className="r r-1" style={{ aspectRatio: '16/9', position: 'relative', overflow: 'hidden' }}>
             <iframe
-              src="https://www.youtube.com/embed/6fd6jevtPtc?rel=0&modestbranding=1"
+              src="https://www.youtube.com/embed/6fd6jevtPtc?rel=0&modestbranding=1&controls=1&showinfo=0&iv_load_policy=3&disablekb=1"
               title="XONA Reel"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -416,6 +416,8 @@ function HomeA() {
       <HomeFilosofia />
 
       <HomeMosaic />
+
+      <HomeStats />
 
       <section style={{ padding: 'clamp(2.5rem, 6vw, 5rem) 0', borderTop: '1px solid var(--fg-faint)' }}>
         <div style={{ padding: '0 var(--px)', marginBottom: '2rem' }}>
